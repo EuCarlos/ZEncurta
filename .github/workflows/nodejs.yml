@@ -19,8 +19,13 @@ jobs:
         node-version: ${{ matrix.node-version }}
     - name: npm install, build, and test
       run: |
+        if [ -e yarn.lock ]; then
+        yarn install --frozen-lockfile
+        elif [ -e package-lock.json ]; then
         npm ci
-        npm run build --if-present
-        npm test
+        else
+        npm i
+        fi
+        npm run build
       env:
         CI: true
