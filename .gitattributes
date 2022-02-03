@@ -1,0 +1,12 @@
+*.js linguist-documentation=false
+*.css linguist-documentation=false
+*.scss linguist-documentation=false
+*.html linguist-documentation=false
+*.sql linguist-detectable=true
+
+*.sql linguist-language=sql
+*.js linguist-language=Typescript
+*.css linguist-language=Sass
+*.scss linguist-language=Sass
+
+*.sql diff

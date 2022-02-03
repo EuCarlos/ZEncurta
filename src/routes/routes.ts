@@ -1,6 +1,7 @@
 const router = require('express').Router()
 import { Request, Response } from 'express'
 import prismaClient from 'src/prisma'
+import { generateHash } from '../utils/generate_hash'
 
 router.get('/', (req: Request, res: Response) => {
     res.sendFile(__dirname + '\\views\\index.html')
