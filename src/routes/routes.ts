@@ -42,4 +42,14 @@ router.post('/short', (req: Request, res: Response) => {
         .catch(err => console.log('Oops, we have an err: ' + err))
 })
 
+router.delete('/delete/short/:id', async (req: Request, res: Response) => {
+    await prismaClient.url.delete({
+        where: {
+            id: req.params.id
+        }
+    })
+        .then(() => res.json({ message: "Shortened URL successfully removed."}))
+        .catch(() => res.json({ message: "Oops, shortened URL not removed."}))
+})
+
 export = router
