@@ -6,6 +6,8 @@
   "repository": "https://github.com/EuCarlos/zencurta.git",
   "author": "Carlos Alves",
   "scripts": {
+    "start": "node dist/server.js",
+    "build": "tsc",
     "dev": "ts-node-dev -r tsconfig-paths/register --respawn --transpile-only --ignore-watch node_modules --no-notify src/server.ts",
     "db-prisma": "prisma studio --browser none"
   },
