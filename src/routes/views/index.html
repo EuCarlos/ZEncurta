@@ -5,22 +5,27 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>ZEncurta</title>
+    <link rel="stylesheet" href="styles/home.css">
 </head>
 <body>
     <nav>
-        <div id="logo">ZEncurta</div>
+        <div id="logo">ZE<span class="yellow">ncurta</span></div>
         <ul>
-            <li><a href="#">Login</a></li>
-            <li><a href="#">Register</a></li>
+          <li><a href="#">Login</a></li>
+          <li><a href="#">Registre-se</a></li>
         </ul>
     </nav>
-
+      
     <section id="container">
         <div class="contentWrapper">
-            <form action="">
-                <input type="text">
-                <button>Encurtar</button>
-            </form>
+          <div class="topContentWrapper">
+          <img src="https://raw.githubusercontent.com/EuCarlos/ZEncurta/main/public/assets/logo.svg" alt="logo">
+            <p>Encurtador de link brasileiro e Open-Source</p>
+        </div>
+          <form action="">
+            <input type="url" placeholder="https://webiste.com/">
+            <button>Encurtar</button>
+          </form>
         </div>
     </section>
 
