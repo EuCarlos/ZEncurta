@@ -1,0 +1,30 @@
+footer
+    background: #4B2C78
+    padding: 2rem 0
+
+    display: flex
+    flex-direction: row
+    justify-content: space-around
+    color: #cfd0d1
+    align-items: center
+    & a
+        text-decoration: none
+        color: #cfd0d1
+        &:hover
+            text-decoration: underline
+    & .copyright a, & .links a:hover
+        color: #F0D90C
+
+    & .links 
+        display: flex
+        flex-direction: row
+        align-items: center
+        & > a
+            margin: 0 .5rem
+
+@media screen and ( max-width:  768px)
+    footer
+        flex-direction: column-reverse
+        & .copyright
+            margin-top: 1.5rem
+    

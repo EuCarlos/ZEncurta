@@ -15,8 +15,8 @@
     <nav>
         <div id="logo">ZE<span class="yellow">ncurta</span></div>
         <ul>
-          <li><a href="#">Login</a></li>
-          <li><a href="#">Registre-se</a></li>
+          <li><a href="/a/login">Login</a></li>
+          <li><a href="/a/register">Registre-se</a></li>
         </ul>
       </nav>
       
@@ -24,7 +24,8 @@
         <div class="text-404">
           <h3>ERRO <span class="yellow">404</span></h3>
           <h4>Oops, não encontramos o link encurtado que você tentou acessar, verifique se a url está correta.</h4>
-          <p>https://zencurta.br/hash</p>
+          <p id="path"></p>
+          <a href="/" class="btn">IR PARA O INICIO</a>
         </div>
         <div class="reasons-404">
           <h3>O que pode ter acontecido é que...</h3>
@@ -38,5 +39,22 @@
           <p class="issues">Encontrou algum erro colabore nesse nosso projeto Open-Source, <a href="https://github.com/EuCarlos/ZEncurta/issues">clique aqui</a> para saber como.</p>
         </div>
       </section>
+
+      <footer>
+        <div class=copyright>
+            Copytight © 2021, All Right Reserved <a href="http://carlosalves.now.sh/">Carlos Alves</a>
+        </div>
+        <div class=links>
+            <a href="/">Inicio</a>
+            <a href="/a/login">Login</a>
+            <a href="/a/register">Registre-se</a>
+            <a href="http://carlosalves.now.sh/contatos">Contato</a>
+        </div>
+      </footer>
+
+      <script>
+        let showPath = document.getElementById('path')
+        showPath.innerHTML = window.location
+      </script>
 </body>
 </html>
