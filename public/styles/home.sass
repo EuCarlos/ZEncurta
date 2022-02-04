@@ -1,0 +1,69 @@
+@import url('https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap')
+
+body
+  padding: 0
+  margin: 0
+  font-family: Roboto
+  background: #F4F2F2
+  
+nav
+  display: flex
+  align-items: center
+  justify-content: space-between
+  font-weight: 700
+  & #logo
+    margin: 0
+    padding-left: 65px
+    color: #4B2C78
+  & ul
+    list-style: none
+    display: flex
+    flex-direction: row
+    
+    background: linear-gradient(270deg, #4B2C78 25%, #F0D90C 122.64%)
+    margin: 0
+    & li
+      padding: 15px 65px 15px 10px
+      & a
+        color: #fff
+        text-decoration: none
+        
+span.yellow
+        color: #F0D90C
+  
+#container
+  background-image: url("/public/static/assets/background.svg")
+  width: 100%
+  height: 20rem
+  display: flex
+  justify-content: center
+  & .contentWrapper
+    background: #fff
+    width: 60rem
+    padding: 2rem
+    & .topContentWrapper
+      color: #4B2C78
+      font-size: 1.5rem
+      font-weight: 400
+      text-align: center
+    & form
+        display: flex
+        flex-direction: row
+        width: 100%
+        & input
+          width: 100%
+          background: #F6F5F5
+          color: #4B2C78
+          font-size: 1.2rem
+          border: 3px solid #4B2C78
+          border-radius: 15px 0 0 15px
+          padding: 1rem
+          outline: none
+        & button
+            background: #4B2C78
+            color: #fff
+            font-weight: 700
+            border: none
+            border-radius: 0 15px 15px 0
+            padding: 0 2rem
+            cursor: pointer

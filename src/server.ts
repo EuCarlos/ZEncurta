@@ -18,5 +18,6 @@ app.use(bodyParser.json())
 app.use(bodyParser.urlencoded({ extended: true }))
 
 app.use('/', routesAPI)
+app.use('/public/static', express.static('public'));
 
 app.listen(port, () => console.log(`🔥 Server is running in PORT ${port}`))
