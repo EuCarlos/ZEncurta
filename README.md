@@ -41,10 +41,10 @@ create an `.env` file like the `.env.example` and fill in your github credential
 
 
 ___
-<!-- ### Contributes
+### Contributes
 <a href="https://github.com/eucarlos/ZEncurta/graphs/contributors">
   <img src="https://contrib.rocks/image?repo=eucarlos/ZEncurta" />
-</a> -->
+</a>
 
 <p align="center">
 Created with heart 💜 by <a href="https://github.com/eucarlos/">Carlos Alves</a>
