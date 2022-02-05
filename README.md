@@ -41,7 +41,7 @@ create an `.env` file like the `.env.example` and fill in your github credential
 
 
 ___
-### Contributes
+### Contributors
 <a href="https://github.com/eucarlos/ZEncurta/graphs/contributors">
   <img src="https://contrib.rocks/image?repo=eucarlos/ZEncurta" />
 </a>

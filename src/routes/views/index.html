@@ -26,16 +26,22 @@
           <img src="./public/static/assets/logo.svg" alt="logo">
             <p>Encurtador de link brasileiro e Open-Source</p>
         </div>
-          <form action="">
-            <input type="url" placeholder="https://webiste.com/">
+          <form onsubmit="return createsShortenedLink()">
+            <input type="url" id="url" placeholder="https://webiste.com/">
             <button>Encurtar</button>
           </form>
+          <div id="result"></div>
         </div>
     </section>
 
+    <section id="slide">
+      <p>Duis eiusmod reprehenderit dolore minim laboris. Nostrud aliqua eu aliqua et esse aliquip aute non commodo do sint eiusmod cillum. Ullamco non laborum culpa ipsum labore irure elit amet ut ullamco tempor proident cillum.</p>
+      <p>Duis eiusmod reprehenderit dolore minim laboris. Nostrud aliqua eu aliqua et esse aliquip aute non commodo do sint eiusmod cillum. Ullamco non laborum culpa ipsum labore irure elit amet ut ullamco tempor proident cillum.</p>
+      <p>Duis eiusmod reprehenderit dolore minim laboris. Nostrud aliqua eu aliqua et esse aliquip aute non commodo do sint eiusmod cillum. Ullamco non laborum culpa ipsum labore irure elit amet ut ullamco tempor proident cillum.</p>
+    </section>
     <footer>
       <div class=copyright>
-          Copytight © 2021, All Right Reserved <a href="http://carlosalves.now.sh/">Carlos Alves</a>
+          Copyright © 2021, All Right Reserved <a href="http://carlosalves.now.sh/">Carlos Alves</a>
       </div>
       <div class=links>
           <a href="/">Inicio</a>
@@ -44,5 +50,62 @@
           <a href="http://carlosalves.now.sh/contatos">Contato</a>
       </div>
     </footer>
+
+    <script>
+      const createsShortenedLink = () => {
+        const api = `http://${window.location.host}/short`
+        const url = document.getElementById('url').value
+        const result = document.getElementById('result')
+        const slide = document.getElementById('slide')
+
+        var xhr = new XMLHttpRequest()
+        xhr.open("POST", api)
+
+        xhr.setRequestHeader("Content-Type", "application/json")
+        xhr.onreadystatechange = function () {
+          if (xhr.readyState === 4) {
+
+              const response = JSON.parse(xhr.responseText)
+              const urlShorten = `http://${window.location.host}/${response.hash}`
+
+              result.style = "display: flex;"
+              slide.style = "padding: 6rem 0 1rem 0;"
+
+              const body = `
+                <div class="left">
+                  <div id="url-information">
+                    <p>${urlShorten}</p>
+                    <button onclick="copyToClipboard('${urlShorten}')">copiar</button>
+                  </div>
+                  <div class="url-original">URL original: ${response.original_url}</div>
+                </div>
+                <div id="right">
+                  <p>Quer montar link encurtado personalizados? <a href="/a/login">Faça Login</a></p>
+                </div>
+              `
+              result.innerHTML = body
+
+          }
+        }
+
+        var data = `{
+          "original_url": "${url}",
+          "user_id": "visitor"
+        }`
+
+        xhr.send(data)
+
+        return false
+      }
+
+      const copyToClipboard = async (id) => {
+        if ('clipboard' in navigator) {
+          await navigator.clipboard.writeText(id);
+        } else {
+          document.execCommand('copy', true, id);
+        }
+      }
+        
+    </script>
 </body>
 </html>
