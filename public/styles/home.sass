@@ -116,10 +116,63 @@ span.yellow
   flex-direction: column
   align-items: center
   padding: 1rem 0 1rem 0
-  & p
+  & h3
+    font-size: 2rem
+    color: #4b2c78
+    margin: 0
+  & .slider
     width: 60rem
     padding: 2rem 2rem 0 2rem
   
 @keyframes slidebg
   to
     background-position: 20vw
+
+// Slides
+@mixin white-gradient
+	background: linear-gradient(to right,  rgba(98, 57, 159,1) 0%,rgba(255,255,255,0) 25%)
+
+
+$animationSpeed: 40s
+
+// Animation
+@keyframes scroll
+	0%
+    transform: translateX(0)
+	100%
+    transform: translateX(calc(-250px * 7))
+
+
+
+// Styling
+.slider
+	height: 100px
+	margin: auto
+	overflow: hidden
+	position: relative
+	width: 960px
+	&::before,
+	&::after
+		@include white-gradient
+		content: ""
+		height: 100px
+		position: absolute
+		width: 200px
+		z-index: 2	
+	&::after
+		right: 0
+		bottom: 0
+		transform: rotateZ(180deg)
+	&::before
+		left: 0
+		bottom: 0
+	.slide-track
+		animation: scroll $animationSpeed linear infinite
+		display: flex
+		width: calc(250px * 14)
+	.slide-img
+		height: 100px
+		width: 250px
+	
+.contributors
+  margin: 2rem
