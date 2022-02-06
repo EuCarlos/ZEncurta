@@ -8,22 +8,26 @@
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap" rel="stylesheet">
-    <link rel="stylesheet" href="./public/static/styles/home.css">
+    <link rel="stylesheet" href="../public/static/styles/login.css">
 </head>
 <body>
     <div class="container">
         <div class="containerWrapper">
             <form>
-                <input type="email" name="email" id="email">
-                <input type="password" name="password" id="password">
-                <a href="#">Esqueci senha</a>
+                <div class="logo">
+                    <img src="../public/static/assets/logo.svg" alt="logo">
+                    <p>Olá novamente!</p>
+                </div>
+                <input type="email" name="email" id="email" placeholder="E-mail">
+                <input type="password" name="password" id="password" placeholder="Senha">
+                <a href="#" class="forgot-password">Esqueci senha</a>
                 <button>Entrar</button>
-                <div>Não possui login?<a href="/a/register">Faça já seu cadastro</a></div>
+                <div class="register">Não possui login?<a href="/a/register">Faça já seu cadastro</a></div>
             </form>
         </div>
         <div class="contentRight">
-            <a href="/">&#10094; HOME</a>
-            <p>Exercitation aute est aute ut incididunt fugiat reprehenderit proident exercitation Lorem in. Veniam sit consectetur laboris do eiusmod velit quis est. Culpa ea nostrud consectetur ea consequat deserunt. Magna occaecat eiusmod qui exercitation. Nisi id occaecat incididunt do officia cupidatat commodo. Do consectetur ad elit dolor. Irure esse incididunt officia sunt.</p>
+            <a href="/" class="home-l">&#10094;&#10094; HOME</a>
+            <div class="content-l">Exercitation aute est aute ut incididunt fugiat reprehenderit proident exercitation Lorem in. Veniam sit consectetur laboris do eiusmod velit quis est. Culpa ea nostrud consectetur ea consequat deserunt. Magna occaecat eiusmod qui exercitation. Nisi id occaecat incididunt do officia cupidatat commodo. Do consectetur ad elit dolor. Irure esse incididunt officia sunt.</div>
         </div>
     </div>
 </body>
