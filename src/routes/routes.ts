@@ -52,8 +52,7 @@ router.delete('/delete/short/:id', async (req: Request, res: Response) => {
         .catch(() => res.json({ message: "Oops, shortened URL not removed."}))
 })
 
-router.get('/a/login', (req: Request, res: Response) => {
-    res.sendFile(__dirname + '\\views\\login.html')
-})
+router.get('/a/login', (req: Request, res: Response) => res.sendFile(__dirname + '\\views\\login.html'))
+router.get('/a/register', (req: Request, res: Response) => res.sendFile(__dirname + '\\views\\register.html'))
 
 export = router
