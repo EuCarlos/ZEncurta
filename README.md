@@ -5,7 +5,7 @@
     URL shortener made with Typescript, Express and Prisma
 </p>
 
-<p>
+<p align="center">
     <img alt="GitHub language count" src="https://img.shields.io/github/languages/count/EuCarlos/ZEncurta?style=flat-square">
     <img alt="GitHub top language" src="https://img.shields.io/github/languages/top/EuCarlos/ZEncurta?color=orange&style=flat-square">
     <img alt="GitHub repo size" src="https://img.shields.io/github/repo-size/EuCarlos/ZEncurta?color=yellow&style=flat-square">
@@ -13,7 +13,7 @@
     <img alt="GitHub release (latest by date)" src="https://img.shields.io/github/v/release/eucarlos/ZEncurta?style=flat-square">
 </p>
 
-### Installation
+### Installation:
 
 Clone the repo:
 
@@ -21,17 +21,17 @@ Clone the repo:
 
 Install the dependencies using Yarn:
 
-    yarn install // or -> npm install 
+    yarn install
 
-### Environment variables
+### Environment variables:
 create an `.env` file like the `.env.example` and fill in your github credentials
 
-### Run the project
-#### 1. Start docker
+### Run the project:
+#### 1. Start docker:
 
     docker-compose up -d
 
-#### 2. Run migrations
+#### 2. Run migrations:
 
     yarn prisma migrate dev
 
@@ -41,11 +41,11 @@ create an `.env` file like the `.env.example` and fill in your github credential
 
 
 ___
-### Contributors
+### Contributors:
 <a href="https://github.com/eucarlos/ZEncurta/graphs/contributors">
   <img src="https://contrib.rocks/image?repo=eucarlos/ZEncurta" />
 </a>
 
 <p align="center">
-Created with heart 💜 by <a href="https://github.com/eucarlos/">Carlos Alves</a>
+Created with 💜 by <a href="https://github.com/eucarlos/">Carlos Alves</a>
 </p>
